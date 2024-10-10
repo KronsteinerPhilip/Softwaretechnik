@@ -1,16 +1,32 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HoleTrigger : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject ballObjectsParent;
+
     private void OnTriggerEnter(Collider other)
     {
-        //Deaktiviert eine Kugel wenn sie in einem Loch landet
-        if (other.CompareTag("Kugel"))
+        List<GameObject> allBalls = GetAllBalls(ballObjectsParent);
+
+        foreach (GameObject ball in allBalls)
         {
-            other.gameObject.SetActive(false);
-            GameManager.instance.BallHoled();
+            if (other.gameObject.Equals(ball))
+            {
+                other.gameObject.SetActive(false);
+                GameManager.instance.BallsHoled();
+            }
         }
+    }
+
+    public List<GameObject> GetAllBalls(GameObject parentGameObject)
+    {
+        List<GameObject> children = new List<GameObject>();
+        foreach (Transform childTransform in parentGameObject.transform)
+        {
+            children.Add(childTransform.gameObject);
+        }
+        return children;
     }
 }

@@ -2,26 +2,24 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour
 {
-    public Transform target;        // Das Zielobjekt, um das sich die Kamera drehen soll
-    public float distance = 7.0f;   // Distanz zur Kamera
-    public float xSpeed = 240.0f;   // Geschwindigkeit der Rotation um die X-Achse
-    public float ySpeed = 240.0f;   // Geschwindigkeit der Rotation um die Y-Achse
-    public float yMinLimit = 0f;    // Minimaler y-Winkel
-    public float yMaxLimit = 40f;   // Maximaler y-Winkel
+    [SerializeField]
+    private Transform targetToRotateAround;
+    private float distanceToTarget = 7.0f;
+    private float xRotationSpeed = 240.0f;
+    private float yRotationSpeed = 240.0f;
+    private float yMinAngle = 0f;
+    private float yMaxAngle = 40f;   
 
     private float x = 0.0f;
     private float y = 0.0f;
 
     void Start()
     {
-        // Überprüfe, ob das Ziel gesetzt ist
-        if (target == null)
+        if (targetToRotateAround == null)
         {
             Debug.LogError("Das Zielobjekt ist nicht gesetzt!");
             return;
         }
-
-        //Drehung mit aktuellem Winkel
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
@@ -31,24 +29,21 @@ public class RotateCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        x += Input.GetAxis("Mouse X") * xSpeed * Time.deltaTime;
-        y -= Input.GetAxis("Mouse Y") * ySpeed * Time.deltaTime;
+        x += Input.GetAxis("Mouse X") * xRotationSpeed * Time.deltaTime;
+        y -= Input.GetAxis("Mouse Y") * yRotationSpeed * Time.deltaTime;
 
-        // Begrenze den y-Winkel
-        y = Mathf.Clamp(y, yMinLimit, yMaxLimit);
+        // Begrenzt den y-Winkel
+        y = Mathf.Clamp(y, yMinAngle, yMaxAngle);
 
         UpdateCameraPosition();
     }
 
     void UpdateCameraPosition()
     {
-        // Berechne die neue Rotation
         Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-        // Berechne die neue Position der Kamera basierend auf der Distanz und der Rotation
-        Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distance) + target.position;
+        Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distanceToTarget) + targetToRotateAround.position;
 
-        // Setze die Position und Rotation der Kamera
         transform.rotation = rotation;
         transform.position = position;
     }

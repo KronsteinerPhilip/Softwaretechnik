@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField]
-    private Text text;
-
+    private Text holesText;
+    [SerializeField]
+    private Text attemptsText;
     private int holeCount = 0;
+    private int attemptedShots = 0;
 
     void Awake()
     {
@@ -23,14 +25,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BallHoled()
+    private void Start()
     {
-        holeCount++;
-        text.text = "Points scored: " + holeCount;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    public int GetHoleCount()
+    public void BallsHoled()
     {
-        return holeCount;
+        holeCount++;
+        holesText.text = "Holes scored: " + holeCount;
+    }
+
+    public void TakeShot()
+    {
+        attemptedShots++;
+        attemptsText.text = "Attempts: " + attemptedShots;
     }
 }
