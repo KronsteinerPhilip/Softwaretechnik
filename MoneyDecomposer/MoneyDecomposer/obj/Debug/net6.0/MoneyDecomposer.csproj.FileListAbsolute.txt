@@ -1,0 +1,15 @@
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\bin\Debug\net6.0\MoneyDecomposer.exe
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\bin\Debug\net6.0\MoneyDecomposer.deps.json
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\bin\Debug\net6.0\MoneyDecomposer.runtimeconfig.json
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\bin\Debug\net6.0\MoneyDecomposer.dll
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\bin\Debug\net6.0\MoneyDecomposer.pdb
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.csproj.AssemblyReference.cache
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.AssemblyInfoInputs.cache
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.AssemblyInfo.cs
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.csproj.CoreCompileInputs.cache
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.dll
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\refint\MoneyDecomposer.dll
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.pdb
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\MoneyDecomposer.genruntimeconfig.cache
+C:\Users\Philip\OneDrive\Desktop\Uni\Softwaretechnik\MoneyDecomposer\MoneyDecomposer\obj\Debug\net6.0\ref\MoneyDecomposer.dll
